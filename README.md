@@ -1,75 +1,29 @@
-# Nuxt Minimal Starter
+# Gsap-nuxt
 
 Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
 ## Setup
 
-Make sure to install dependencies:
+### Upgrading to Nuxt 4
 
-```bash
-# npm
-npm install
+follow the instructions 
 
-# pnpm
-pnpm install
+[Click Here](https://www.vuemastery.com/blog/upgrading-to-nuxt-4/#nuxt-4-folder-structure)
 
-# yarn
-yarn install
+### Getting Started with v-gsap-nuxt
 
-# bun
-bun install
+#### Install manually
+1. Install from npm
+
+``` 
+npm i v-gsap-nuxt
+```
+2. Add module to your ```nuxt.config.ts```
+
+```
+modules: [
+  'v-gsap-nuxt'
+]
 ```
 
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+and follow the [doc](https://v-gsap-nuxt.vercel.app/installation/philosophy).
