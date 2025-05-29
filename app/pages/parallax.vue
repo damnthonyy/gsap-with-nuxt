@@ -7,20 +7,34 @@ onBeforeMount(()=>{
 
 const section1=ref()
 
-onMounted(()=>{
-
-})
+const animation=()=>{
+    gsap.to('.Dot-1',{
+        width:'100vw',
+        ease:'power2.inOut',
+        scrollTrigger:{
+            trigger:'#main',
+            start:'30% top',
+            end:'50% 10%',
+            scrub:1,
+            markers:false,
+        }
+    })
+}
 </script>
 
 <template>
-<section v-gsap.timeline class="w-[100vw] h-[200vh] flex justify-center items-center" ref="section1">
-    <section class="flex justify-center items-center">
-        <div class="w-[400px] h-[400px] bg-neutral-600 rounded-full mt-[50px] absolute" v-gsap.markers.timeline.pinned="{start:'top 40%',end:'50% 10%'}" >  <!-- scoll-a scoller-start scroll-b scroller-end -->
-            
-        </div>
-    </section>
+<div>
+    <section v-gsap.timeline.pinned class="w-[100vw] h-[200vh] flex justify-center items-center" id="main" >
+    <h1
+    v-gsap.add.fromTo="[{opacity:0, y:50},{opacity:1, y:0}]"
+    v-gsap.add.to="{opacity:1,y:-50}"
+    class="Dot-1">Hello World</h1>
+    
+    
     
 </section>
+</div>
+
 
 </template>
 
@@ -34,5 +48,10 @@ onMounted(()=>{
     align-items: center;
     font-weight: 900;
 }
-
+.Dot-1{
+   font-size: 60px;
+   color: #2A2A2A;
+   align-items: center;
+   font-weight: 900;
+}
 </style>
